@@ -1,0 +1,13 @@
+.row {
+  background: green;
+  padding: 1em;
+}
+
+.card {
+  width: 64mm;
+  height: 89mm;
+  background: white;
+  border: black solid 1em;
+  margin: 1em;
+  border-radius: 1em;
+}

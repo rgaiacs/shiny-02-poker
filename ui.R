@@ -10,7 +10,8 @@ shinyUI(fluidPage(
     fluidRow(
         column(12,
                div(
-                   class="card"
+                   class="card",
+                   textOutput("card")
                )
         )
     )

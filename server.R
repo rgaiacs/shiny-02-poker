@@ -7,9 +7,11 @@ shinyServer(function(input, output) {
     numbers <- tibble(number = c("A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"))
     deck <- crossing(suits, numbers)
 
-    card <- sample_n(deck, 1)
+    cards <- sample_n(deck, 3)
 
-    output$card <- renderText({
-        paste0(card$number, " ", card$suit)
+    lapply(1:nrow(cards), function(i) {
+        output[[paste0('card', i)]] <- renderText({
+            paste0(cards$number[i], " ", cards$suit[i])
+        })
     })
 })

@@ -10,4 +10,33 @@
   border: black solid 1em;
   margin: 1em;
   border-radius: 1em;
+  display: inline-block;
+  text-align: center;
+}
+
+.clubs,
+ .spades {
+   color: black;
+ }
+
+.diamonds,
+.hearts {
+  color: red;
+}
+
+.card > span {
+  font-size: 8em;
+}
+
+.spades > span::after {
+  content: "♠";
+}
+.hearts > span::after {
+  content: "♥";
+}
+.diamonds > span::after {
+  content: "♦";
+}
+.clubs > span::after {
+  content: "♣";
 }

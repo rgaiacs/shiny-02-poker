@@ -9,12 +9,7 @@ shinyUI(fluidPage(
 
     fluidRow(
         column(12,
-           lapply(1:3, function(i) {
-               div(
-                   class="card",
-                   textOutput(paste0("card", i))
-               )
-           })
+           uiOutput("cards")
         )
     )
 ))

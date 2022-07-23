@@ -7,6 +7,8 @@ shinyUI(fluidPage(
 
     titlePanel("Poker"),
 
+    actionButton("new_hand", "New Hand"),
+
     fluidRow(
         column(12,
            uiOutput("cards")

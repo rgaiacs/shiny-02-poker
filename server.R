@@ -22,4 +22,21 @@ shinyServer(function(input, output) {
         )
     })
 
+    observeEvent(input$new_hand, {
+        cards <- sample_n(deck, 5)
+
+        output$cards <- renderUI({
+            tagList(
+                lapply(1:nrow(cards), function(i) {
+                    div(
+                        class=paste("card", cards$suit[i]),
+                        span(
+                            cards$number[i]
+                        )
+                    )
+                })
+            )
+        })
+    })
+
 })
